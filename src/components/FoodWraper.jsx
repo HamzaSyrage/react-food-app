@@ -3,9 +3,6 @@ import FoodCard from "./FoodCard";
 
 export default function FoodWrapper() {
   const { data, loading, errors } = useFetsh("http://localhost:3000/meals");
-  // console.log(data);
-  // console.log(loading);
-  // console.log(errors);
   if (errors) {
     return <div class="error">Error While fetching data from the backend</div>;
   } else if (loading) {
